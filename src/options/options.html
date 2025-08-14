@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Arbitrage - Settings</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 { color: #667eea; }
+    .setting-group {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #5a67d8; }
+  </style>
+</head>
+<body>
+  <h1>Currency Arbitrage Settings</h1>
+  
+  <div class="setting-group">
+    <h3>Preferred Currencies</h3>
+    <label>
+      <input type="checkbox" value="USD" checked> USD - US Dollar
+    </label>
+    <label>
+      <input type="checkbox" value="EUR" checked> EUR - Euro
+    </label>
+    <label>
+      <input type="checkbox" value="GBP" checked> GBP - British Pound
+    </label>
+    <label>
+      <input type="checkbox" value="INR" checked> INR - Indian Rupee
+    </label>
+  </div>
+  
+  <div class="setting-group">
+    <h3>Notifications</h3>
+    <label>
+      <input type="checkbox" id="show-notifications" checked> Show savings notifications
+    </label>
+  </div>
+  
+  <button id="save-settings">Save Settings</button>
+  
+  <script type="module" src="./options.ts"></script>
+</body>
+</html>

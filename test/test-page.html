@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page - Subscription Pricing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #141414;
+      color: white;
+      padding: 40px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .subtitle {
+      font-size: 24px;
+      margin-bottom: 40px;
+      opacity: 0.8;
+    }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .plan-card {
+      background: #222;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: all 0.3s;
+    }
+    .plan-card:hover {
+      border-color: #e50914;
+      transform: translateY(-5px);
+    }
+    .plan-card.featured {
+      border-color: #e50914;
+      position: relative;
+    }
+    .featured-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #e50914;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .plan-name {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #e50914;
+    }
+    .plan-price, .price-text {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .price-period {
+      font-size: 16px;
+      opacity: 0.7;
+      margin-bottom: 30px;
+    }
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .plan-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+    }
+    .plan-features li:last-child {
+      border-bottom: none;
+    }
+    .select-btn {
+      background: #e50914;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .select-btn:hover {
+      background: #f40612;
+    }
+    .url-display {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="url-display" id="url-display"></div>
+  
+  <div class="container">
+    <h1>Choose Your Plan</h1>
+    <p class="subtitle">Watch unlimited movies and TV shows</p>
+    
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Basic</div>
+        <div class="plan-price" data-uia="plan-price">$8.99</div>
+        <div class="price-period">per month</div>
+        <ul class="plan-features">
+          <li>Watch on 1 device</li>
+          <li>HD available</li>
+          <li>Download on 1 device</li>
+        </ul>
+        <button class="select-btn">Select Plan</button>
+      </div>
+      
+      <div class="plan-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="plan-name">Standard</div>
+        <div class="price-text">$15.49</div>
+        <div class="price-period">per month</div>
+        <ul class="plan-features">
+          <li>Watch on 2 devices</li>
+          <li>Full HD available</li>
+          <li>Download on 2 devices</li>
+        </ul>
+        <button class="select-btn">Select Plan</button>
+      </div>
+      
+      <div class="plan-card">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price" data-uia="plan-price">$22.99</div>
+        <div class="price-period">per month</div>
+        <ul class="plan-features">
+          <li>Watch on 4 devices</li>
+          <li>Ultra HD available</li>
+          <li>Download on 6 devices</li>
+        </ul>
+        <button class="select-btn">Select Plan</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Display current URL for testing
+    document.getElementById('url-display').textContent = window.location.href;
+    
+    // Simulate Netflix-like domain for testing
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log('Test page loaded - simulating Netflix pricing page');
+    }
+  </script>
+</body>
+</html>

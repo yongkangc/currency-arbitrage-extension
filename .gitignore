@@ -1,0 +1,53 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+dist/
+build/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+coverage/
+*.lcov
+.nyc_output
+
+# Production builds
+*.crx
+*.pem
+*.xpi
+*.zip
+
+# Browser extension specific
+manifest.json.bak
+web-ext-artifacts/
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+.parcel-cache/
+.webpack/
+
+# OS files
+Thumbs.db
